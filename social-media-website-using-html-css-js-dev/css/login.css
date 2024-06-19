@@ -1,0 +1,209 @@
+body{
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Jost" ,sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);    
+}
+
+.main{
+    width: 400px;
+    height: 550px;
+    overflow: hidden;
+    background: url("../images/image1.jpg") no-repeat center / cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    position: absolute;
+    top: 4vw;
+    left: 55vw;
+}
+
+#chk{
+    display: none;
+}
+
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+}
+
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display:flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+    height: 20px;
+    background: rgb(255,255,255);
+    justify-content: center;
+    display:flex;
+    margin: 20px auto;
+    padding:10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display:block;
+    color: #fff;
+    background: rgb(0,153,255);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+    cursor:pointer;
+
+}
+
+button:hover{
+    background: rgb(0,0,255);
+
+}
+
+.login{
+    height: 460px;
+    background: rgb(230,247,255);
+    border-radius: 60%/10%;
+    transform:translateY(-180px);
+    transition: 0.8s ease-in-out;
+}
+
+.login label{
+    color:rgb(0,153,255);
+    transform:scale(.6);
+}
+
+#chk:checked~.login {
+    transform: translateY(-500px);
+
+}
+
+#chk:checked~.login label{
+    transform:scale(1);
+
+}
+
+#chk:checked~.signup label{
+    transform:scale(.6);
+}
+
+::placeholder{
+    color:black;
+}
+
+
+#main-container{
+    display: flex;
+    width: 100%;
+    height: 55vw;
+}
+#image-container{
+    width: 50%;
+    height: 55vw;
+}
+#form-container{
+    width: 50%;
+    height: 55vw;
+}
+#phone-frame1{
+    height: 40vw;
+    width: 20vw;
+    position: relative;
+    left: 14vw;
+    top: 3vw;
+    background-image: url("../images/mobileframe1.jpg");
+    background-repeat: no-repeat;
+    background-size: 20vw 40vw;
+    border-radius: 3vw;
+    
+}  
+#phone-frame2{
+    height: 40vw;
+    width: 20vw;    
+    position: absolute;
+    left: 28vw;
+    top: 10vw;
+    background-image: url("../images/mobileframe1.jpg");
+    background-repeat: no-repeat;
+    background-size: 20vw 40vw;
+    border-radius: 3vw;
+}
+ 
+@keyframes example {
+    0% {background-image: url("../images/1.jpg");}
+    25% {background-image: url("../images/2a.jpg");}
+    50% {background-image: url("../images/2.jpg");}
+    75% {background-image: url("../images/3.jpg");}
+    100% {background-image: url("../images/4.jpg");}
+}
+#for-images{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    border-radius: 2vw;
+    height: 38.5vw;
+    width: 18vw;
+    background-image: url("../images/1.jpg");
+    animation-timing-function: cubic-bezier(1.0, 0, 0.3, 1.0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes example2 {
+    0% {background-image: url("../images/5.jpg");}
+    25% {background-image: url("../images/6.jpg");}
+    50% {background-image: url("../images/7.jpg");}
+    75% {background-image: url("../images/6.jpg");}
+    100% {background-image: url("../images/6.jpg");}
+}
+
+#for-back-phone{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    border-radius: 2vw;
+    height: 38.5vw;
+    width: 18vw;
+    background-image: url("../images/1.jpg");
+    animation-timing-function: cubic-bezier(1.0, 0, 0.3, 1.0);
+    background-size: cover;
+    animation-name: example2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.nikhilLink{
+    text-decoration: none;
+}
+
+#h3,#heading{
+    color: rgb(171, 247, 222);
+    color: red;
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    left: 140px;
+}

@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color:rgb(230,247,255);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bio {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.friends-section,
+.blank-space{
+    /* flex: 1; */
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 120px); /* Subtracting height of header and some padding */
+    display: flex;
+    flex-direction: column; /* Adjust to vertical direction */
+    align-items: flex-start; /* Align items to the start (left side) */
+    padding-right: 10px; /* Add some spacing between the sections */
+    align-self: flex-end;
+}
+.suggestions-section{
+    /* flex: 1; */
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 120px); /* Subtracting height of header and some padding */
+    display: flex;
+    flex-direction: column; /* Adjust to vertical direction */
+    align-items: flex-end; /* Align items to the start (left side) */
+    padding-right: 10px; /* Add some spacing between the sections */
+    align-self: flex-end;
+}
+
+.friends-section h2,
+.suggestions-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.friend {
+    display: flex;
+    flex-direction: column; /* Added to stack the name and count */
+    align-items: center;
+    padding: 10px;
+    width:400px;
+    background-color:rgb(77, 184, 255);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.suggestion{
+    /* width: 250px; */
+    display: flex;
+    flex-direction: column; /* Added to stack the name and count */
+    align-items: center;
+    padding: 10px;
+    background-color:rgb(77, 184, 255);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.friend img,
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+
+.mutual-friends {
+    font-size: 12px;
+    color: #888;
+}
+
+.suggestion-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.suggestion-buttons button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-friend {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.message {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Add hover effects and transitions */
+.friend:hover,
+.suggestion:hover {
+    transform: translateY(-5px);
+    background-color: rgb(0,0,255);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.friend img:hover,
+.suggestion img:hover {
+    transform: scale(1.1);
+}
+
+.add-friend,
+.message {
+    transition: background-color 0.3s;
+}
+
+.add-friend:hover,
+.message:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* .blank-space {
+    width: 42%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .blank-space img {
+    width: 100%;
+    height: 100%;
+} */
+
+ 
+.blank-container {
+    align-items: flex-start;
+    /* border:10px solid green; */
+    margin-right: 30px;
+    width: 500px;
+    margin-top: 50px;
+    visibility: hidden;
+}
+
+.blank-space {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px; 
+    /* border:10px solid red; */
+    /* margin: ; */
+    height:200px;
+    overflow: hidden;
+}
+
+.profile-picture1 {
+    width: 130px;
+    height: 130px;
+    border:2px solid black;
+    background-color: #ccc; 
+    margin-right: 20px;
+    margin: 20px;
+    align-self: flex-start;
+    
+}
+.profile-picture1 img{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.profile-info1 {
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+    position: relative;
+    /* float: right; */
+    top: -150px;
+    right: -200px; 
+}
+
+.bio-section {
+    margin-top: 10px;
+    /* border:10px solid pink; */
+    height: 80px;
+}
+
+.section-headings {
+    display: flex;
+    justify-content: space-around;
+    /* border: 10px solid purple; */
+    margin: -20px;
+}
+
+.section-headings h3 {
+    margin-right: 20px;
+}
+
+.smaller-divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 10px solid orange;
+    margin:20px;
+}
+
+
+.smaller-div {
+    width: 100px; 
+    height: 100px;
+    background-color: #ccc; 
+    margin: 10px;
+    
+}     
+
+

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    right: 35px;
+    top: 70px;
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    width: 290px; /* Adjusted width */
+    overflow-y: auto;
+    z-index: 2;
+    display: none;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Adjusted transition speed */
+    cursor: pointer;
+}
+
+.notification:hover {
+    background-color: #555;
+}
+
+.notification .type {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notification .details {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.clear-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.clear-btn:hover {
+    background-color: #777;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accept-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.reject-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Responsive styles */
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        max-width: none;
+    }
+}
